@@ -21,7 +21,7 @@ Code: The code associated with the project is well organized and easy to follow.
 Data: The underlying data are publicly accessible via the CDC GIS website and can also be downloaded/accessed within the Rmd script.
 
 First we must load the necessary R packages
-```{r}
+```{r, results='hide'}
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
