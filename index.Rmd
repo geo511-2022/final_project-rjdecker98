@@ -1,14 +1,14 @@
 ---
 title: "Prevalence of Diabetes in the United States"
 author: Bobby Decker
-subtitle: Visualizing the spread of diabetes in the United States through the last 20 years
+subtitle: Visualizing the spread of diabetes in the United States from 2010-2018
 ---
 
 # Introduction
 
 [~ 200 words]
 
-Diabetes has been spreading rapidly throughout the United States through the last 20 years. Type 2 Diabetes is associated with obesity which stems from poor eatings habits and lack of consistent physical activity. 
+Diabetes has been spreading rapidly throughout the United States through the last 20 years. Type 2 Diabetes is associated with obesity which stems from poor eating habits and lack of consistent physical activity. 
 
 # Materials and methods
 
