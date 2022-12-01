@@ -6,31 +6,19 @@ subtitle: Visualizing the spread of diabetes in the United States from 2010-2018
 
 # Introduction
 
-[~ 200 words]
 
-Diabetes has been spreading rapidly throughout the United States through the last 20 years. Type 2 Diabetes is associated with obesity which stems from poor eating habits and lack of consistent physical activity. 
+Diabetes has been spreading rapidly throughout the United States through the last 20 years. Type 2 Diabetes is associated with obesity which stems from poor eating habits and lack of consistent physical activity. It has been studied that more than 100 million U.S. adults are living with diabetes or are considered prediabetic. As of 2015, 30.3 million Americans - 9.4 percent of the U.S. population - are diabetic. Diabetes is a serious disease that can be mitigated through increased physical activity to maintain safe and consistent blood sugar levels. 
 
 # Materials and methods
 
-[~ 200 words]
 
-Narrative: Clear narrative description of the data sources and methods. Includes data from at least two sources that were integrated / merged in R.
+For the purpose of this study, a few different visualizations of diabetes and levels of physical activity will be created through the R packages such as ggplot2. An animated map showing the change in spatial distribution of diabetes will be produced using the R package gganimate. 
 
 Code: The code associated with the project is well organized and easy to follow. Demonstrates mastery of R graphics and functions.
 
-Data: The underlying data are publicly accessible via the web and downloaded/accessed within the Rmd script. If you want to use your own data, you must make it available on a website (e.g. Figshare) so that others are able to re-run your code.
+Data: The underlying data are publicly accessible via the CDC GIS website and can also be downloaded/accessed within the Rmd script.
 
-You can do bullets like this:
 
-* The first most important thing
-* The second most important thing
-* The third most important thing
-
-You can do numbers like this:
-
-1. The first most important thing
-2. The second most important thing
-3. The third most important thing
 
 See [http://rmarkdown.rstudio.com/](http://rmarkdown.rstudio.com/) for all the amazing things you can do.
 
