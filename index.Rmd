@@ -26,13 +26,13 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 library(janitor)
-library(gganimate)
 library(gifski)
+library(gganimate)
 ```
 
 
 
-Here's my first code chunk.
+
 ```{r}
 
 ```
