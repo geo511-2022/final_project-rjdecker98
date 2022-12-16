@@ -11,10 +11,12 @@ Diabetes has been spreading rapidly throughout the United States through the las
 
 As of 2015, 30.3 million Americans - 9.4 percent of the U.S. population - are diabetic. Diabetes is a serious disease that can be mitigated through increased physical activity to maintain safe and consistent blood sugar levels. 
 
+For the purpose of this project I am going to create visualizations that compare the levels of diagnosed diabetes percentage with the percentage levels of physical inactivity in the United States and in NY State. It is hypothesized that we will see an overall increase in levels of Diagnosed Diabetes percentage. Finally, it is also hypothesized that we will observe a correlation between diagnosed diabetes percentage and levels of physical inactivity.
+
 # Materials and methods
 
 
-For the purpose of this study, a few different visualizations of diabetes and levels of physical activity will be created through the R packages such as ggplot2. An animated map showing the change in spatial distribution of diabetes will be produced using the R package gganimate. 
+For the purpose of this study, a few different visualizations of diabetes and levels of physical activity will be created through the R packages such as ggplot2. First I will compare the overall diabetes diagnosed percentages throughout the United States from 2010-2018. Then I will produce a visualization of the diagnosed diabetes percentages in NY in 2018 and compare it with the percentage levels of physical inactivity collected in the same year. 
 
 First we must load the necessary R packages
 ```{r, message=FALSE, warning=FALSE, results=FALSE}
@@ -131,25 +133,26 @@ Now we are going use the patchwork package to compare these two maps side by sid
 diabetes+diabetes1
 ```
 
-```{r}
+```{r,message=FALSE, warning=FALSE}
 NY_diabetes<-plot_usmap(data = diabetes_2018, values = "Diagnosed.Diabetes.Percentage_2018",include = c("NY"), color = "red") +
    scale_fill_continuous(
     low = "white", high = "red", name = "Diagnosed Diabetes Percentage", label = scales::comma)+
   labs(title = "Diagnosed Diabetes Population In NY 2018",)+
     theme(legend.position = "bottom")
-
+NY_diabetes
 ```
 
 
-```{r}
+```{r,message=FALSE, warning=FALSE}
 NY_Inactivity<-plot_usmap(data = inactivity_2018, values = "Physical.Inactivity.Percentage",include = c("NY"), color = "red") +
    scale_fill_continuous(
     low = "white", high = "red", name = "Physcial Inactivity Perecentage", label = scales::comma)+
   labs(title = "Physcial Inactivity Percentage In NY 2018",)+
     theme(legend.position = "bottom")
+NY_diabetes
 ```
 
-```{r}
+```{r,message=FALSE, warning=FALSE}
 NY_diabetes+NY_Inactivity+
       theme(legend.position = "right")
 
