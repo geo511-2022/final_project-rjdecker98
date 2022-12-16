@@ -6,7 +6,7 @@ subtitle: Visualizing the spread of diabetes in the United States from 2010-2018
 
 # Introduction
 
-
+test
 Diabetes has been spreading rapidly throughout the United States through the last 20 years. Type 2 Diabetes is associated with obesity which stems from poor eating habits and lack of consistent physical activity. It has been studied that more than 100 million U.S. adults are living with diabetes or are considered prediabetic. 
 
 As of 2015, 30.3 million Americans - 9.4 percent of the U.S. population - are diabetic. Diabetes is a serious disease that can be mitigated through increased physical activity to maintain safe and consistent blood sugar levels. 
