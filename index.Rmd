@@ -28,6 +28,7 @@ library(usmap)
 library(ggthemes)
 library(maps)
 library(purrr)
+library(patchwork)
 ```
 
 
@@ -63,7 +64,7 @@ counties <- plot_usmap(data = diabetes_data,
                        color = "black",
                        size = 0.1)
 
-ggplot() +  
+diabetes<-ggplot() +  
   geom_polygon(data=counties[[1]], 
                aes(x=x, 
                    y=y, 
@@ -93,12 +94,12 @@ Now for comparison we are going to produce a similar map of the distribution of 
 states <- plot_usmap("states", 
                      color = "red",
                      fill = alpha(0.01)) #this parameter is necessary to get counties to show on top of states
-counties <- plot_usmap(data = diabetes_data, 
+counties1 <- plot_usmap(data = diabetes_data, 
                        values = "Diagnosed.Diabetes.Percentage_2018",
                        color = "black",
                        size = 0.1)
 
-ggplot() +  
+diabetes1<-ggplot() +  
   geom_polygon(data=counties[[1]], 
                aes(x=x, 
                    y=y, 
@@ -121,8 +122,9 @@ ggplot() +
   )
 ```
 
-Now we are going to compare these two maps with the observed increase in physical inactivity
+Now we are going use the patchwork package to compare these two maps side by side.
 ```{r}
+diabetes+diabetes1
 ```
 
 # Conclusions
