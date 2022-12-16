@@ -163,4 +163,6 @@ Through the visualizations created we can see there has been a steady observable
 
 # References
 
+Mohammadian, Cyrus. “Plotting Both State and County Boundaries on Same Map Using plot_usmap from USMAP Package in R.” Stack Overflow, 1 Mar. 1967, https://stackoverflow.com/questions/59851823/plotting-both-state-and-county-boundaries-on-same-map-using-plot-usmap-from-usma. 
+
 “Social Determinants of Health - United States Diabetes Surveillance System.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, https://gis.cdc.gov/grasp/diabetes/diabetesatlas-sdoh.html. 
