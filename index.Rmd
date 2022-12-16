@@ -80,7 +80,7 @@ diabetes<-ggplot() +
                fill = alpha(0.01)) + 
   coord_equal() +
   theme_map() +
-  theme(legend.position="none") +
+  theme(legend.position="bottom") +
   scale_fill_gradient(low='white', high='grey20')+
   labs(
     title="US Diabetes Distribution 2010"
@@ -116,7 +116,7 @@ diabetes1<-ggplot() +
                fill = alpha(0.01)) + 
   coord_equal() +
   theme_map() +
-  theme(legend.position="none") +
+  theme(legend.position="bottom") +
   scale_fill_gradient(low='white', high='grey20')+
   labs(
     title="US Diabetes Distribution 2018"
