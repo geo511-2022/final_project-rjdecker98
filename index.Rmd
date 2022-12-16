@@ -127,7 +127,6 @@ Now we are going to compare these two maps with the observed increase in physica
 
 # Conclusions
 
-[~200 words]
 
 Clear summary adequately describing the results and putting them in context. Discussion of further questions and ways to continue investigation.
 
