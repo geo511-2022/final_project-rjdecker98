@@ -46,6 +46,21 @@ diabetes_data<-cbind(diabetes_2010,diabetes_2018)%>%
 inactivity_data<-cbind(inactivity_2010,inactivity_2018)
 ```
 
+
+```{r, results='asis'}
+
+```
+
+Add any additional processing steps here.
+
+# Results
+
+[~200 words]
+
+Tables and figures (maps and other graphics) are carefully planned to convey the results of your analysis. Intense exploration and evidence of many trials and failures. The author looked at the data in many different ways before coming to the final presentation of the data.
+
+Show tables, plots, etc. and describe them.
+
 First we are going to produce a map of the distribution of Diabetes in the United States from 2010-2018
 ```{r, message=FALSE, warning=FALSE}
 states <- plot_usmap("states", 
@@ -80,23 +95,6 @@ ggplot() +
 
 ```
 
-```{r, results='asis'}
-
-```
-
-Add any additional processing steps here.
-
-# Results
-
-[~200 words]
-
-Tables and figures (maps and other graphics) are carefully planned to convey the results of your analysis. Intense exploration and evidence of many trials and failures. The author looked at the data in many different ways before coming to the final presentation of the data.
-
-Show tables, plots, etc. and describe them.
-
-```{r}
-
-```
 
 
 ```{r}
