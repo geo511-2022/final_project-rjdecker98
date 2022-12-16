@@ -34,7 +34,7 @@ library(ggthemes)
 
 
 Next we must read and transform the diabetes and physical inactivity data from the CDC's website https://gis.cdc.gov/grasp/diabetes/diabetesatlas-sdoh.html
-```{r}
+```{r, message=FALSE, warning=FALSE} 
 diabetes_2010<- read.csv("DiabetesAtlasData_2010.csv")
 diabetes_2018 <- read.csv("DiabetesAtlasData_2018.csv")
 inactivity_2010 <- read.csv("DiabetesAtlasData_activity_2010.csv")
@@ -46,8 +46,8 @@ diabetes_data<-cbind(diabetes_2010,diabetes_2018)%>%
 inactivity_data<-cbind(inactivity_2010,inactivity_2018)
 ```
 
-First we are going to produce a map of 
-```{r}
+First we are going to produce a map of the distribution of Diabetes in the United States from 2010-2018
+```{r, message=FALSE, warning=FALSE}
 states <- plot_usmap("states", 
                      color = "red",
                      fill = alpha(0.01)) #this parameter is necessary to get counties to show on top of states
