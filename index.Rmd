@@ -28,19 +28,55 @@ library(ggplot2)
 library(janitor)
 library(gifski)
 library(gganimate)
+library(usmap)
+library(ggthemes)
 ```
 
 
-Next we must read and transform the diabetes data from the CDC's website https://gis.cdc.gov/grasp/diabetes/diabetesatlas-sdoh.html
+Next we must read and transform the diabetes and physical inactivity data from the CDC's website https://gis.cdc.gov/grasp/diabetes/diabetesatlas-sdoh.html
 ```{r}
 diabetes_2010<- read.csv("DiabetesAtlasData_2010.csv")
 diabetes_2018 <- read.csv("DiabetesAtlasData_2018.csv")
 inactivity_2010 <- read.csv("DiabetesAtlasData_activity_2010.csv")
 inactivity_2018 <- read.csv("DiabetesAtlasData_activity_2018.csv")
+
+diabetes_data<-cbind(diabetes_2010,diabetes_2018)%>%
+  select(County_FIPS, Diagnosed.Diabetes.Percentage,Diagnosed.Diabetes.Percentage_2018)%>%
+  rename(fips=County_FIPS)
+inactivity_data<-cbind(inactivity_2010,inactivity_2018)
 ```
 
-
+First we are going to produce a map of 
 ```{r}
+states <- plot_usmap("states", 
+                     color = "red",
+                     fill = alpha(0.01)) #this parameter is necessary to get counties to show on top of states
+counties <- plot_usmap(data = diabetes_data, 
+                       values = "Diagnosed.Diabetes.Percentage",
+                       color = "black",
+                       size = 0.1)
+
+ggplot() +  
+  geom_polygon(data=counties[[1]], 
+               aes(x=x, 
+                   y=y, 
+                   group=group, 
+                   fill = counties[[1]]$Diagnosed.Diabetes.Percentage), 
+               color = "black",
+               size = 0.1) +  
+  geom_polygon(data=states[[1]], 
+               aes(x=x, 
+                   y=y, 
+                   group=group), 
+               color = "red", 
+               fill = alpha(0.01)) + 
+  coord_equal() +
+  theme_map() +
+  theme(legend.position="none") +
+  scale_fill_gradient(low='white', high='grey20')+
+  labs(
+    title="Change in US Diabetes Distribution 2010-2018"
+  )
 
 ```
 
