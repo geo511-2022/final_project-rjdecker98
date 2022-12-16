@@ -121,9 +121,8 @@ ggplot() +
   )
 ```
 
-
+Now we are going to compare these two maps with the observed increase in physical inactivity
 ```{r}
-
 ```
 
 # Conclusions
