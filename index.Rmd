@@ -133,6 +133,7 @@ Now we are going use the patchwork package to compare these two maps side by sid
 diabetes+diabetes1
 ```
 
+Third, we are going to create a county map of NYS showing the diagnosed diabetes percentage of 2018.
 ```{r,message=FALSE, warning=FALSE}
 NY_diabetes<-plot_usmap(data = diabetes_2018, values = "Diagnosed.Diabetes.Percentage_2018",include = c("NY"), color = "red") +
    scale_fill_continuous(
@@ -142,26 +143,25 @@ NY_diabetes<-plot_usmap(data = diabetes_2018, values = "Diagnosed.Diabetes.Perce
 NY_diabetes
 ```
 
-
+Now we are going produce a similar map of NYS for the physical inactivity levels from 2018. 
 ```{r,message=FALSE, warning=FALSE}
 NY_Inactivity<-plot_usmap(data = inactivity_2018, values = "Physical.Inactivity.Percentage",include = c("NY"), color = "red") +
    scale_fill_continuous(
-    low = "white", high = "red", name = "Physcial Inactivity Perecentage", label = scales::comma)+
+    low = "white", high = "red", name = "Physcial Inactivity Percentage", label = scales::comma)+
   labs(title = "Physcial Inactivity Percentage In NY 2018",)+
     theme(legend.position = "bottom")
 NY_diabetes
 ```
-
+Now here is a comparison of the maps side by side. 
 ```{r,message=FALSE, warning=FALSE}
 NY_diabetes+NY_Inactivity+
       theme(legend.position = "right")
 
 ```
 # Conclusions
-test
 
-Clear summary adequately describing the results and putting them in context. Discussion of further questions and ways to continue investigation.
+
 
 # References
 
-All sources are cited in a consistent manner
+“Social Determinants of Health - United States Diabetes Surveillance System.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, https://gis.cdc.gov/grasp/diabetes/diabetesatlas-sdoh.html. 
