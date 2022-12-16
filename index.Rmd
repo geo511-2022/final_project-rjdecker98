@@ -158,10 +158,8 @@ NY_diabetes+NY_Inactivity+
 
 ```
 # Conclusions
-test
-
-Clear summary adequately describing the results and putting them in context. Discussion of further questions and ways to continue investigation.
+Through the visualizations created we can see there has been a steady observable increase in diabetes diagnosis percentage in many counties in the US from 2010-2018.Also, through our visualization of NYS we can see that there is a correlation between physical inactivity and diagnosed diabetes percentage. These results are consistent with the data and other sources researching diabetes and related health effects. 
 
 # References
 
-All sources are cited in a consistent manner
+“Social Determinants of Health - United States Diabetes Surveillance System.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, https://gis.cdc.gov/grasp/diabetes/diabetesatlas-sdoh.html. 
