@@ -143,7 +143,7 @@ NY_diabetes<-plot_usmap(data = diabetes_2018, values = "Diagnosed.Diabetes.Perce
 NY_diabetes
 ```
 
-We are going to produce a similar comparison map, this time shoing the percentages of physical inactivity levels in counties of NYS in 2018
+We are going to produce a similar comparison map, this time showing the percentages of physical inactivity levels in counties of NYS in 2018
 ```{r,message=FALSE, warning=FALSE}
 NY_Inactivity<-plot_usmap(data = inactivity_2018, values = "Physical.Inactivity.Percentage",include = c("NY"), color = "red") +
    scale_fill_continuous(
@@ -152,17 +152,19 @@ NY_Inactivity<-plot_usmap(data = inactivity_2018, values = "Physical.Inactivity.
     theme(legend.position = "bottom")
 NY_diabetes
 ```
-Here are the two maps together for comparison.
+Here are the two maps together for comparison. Here we can see similarities in the amounts of diagnosed diabetes percentages and levels of physical inactivity.
 ```{r,message=FALSE, warning=FALSE}
 NY_diabetes+NY_Inactivity+
       theme(legend.position = "right")
 
 ```
 # Conclusions
-Through the visualizations created we can see there has been a steady observable increase in diabetes diagnosis percentage in many counties in the US from 2010-2018.Also, through our visualization of NYS we can see that there is a correlation between physical inactivity and diagnosed diabetes percentage. These results are consistent with the data and other sources researching diabetes and related health effects. 
+Diabetes is a chronic health condition that is of growing concern for the United States population. Diabetes is commonly associated with poor diet and lack of consistent physical activity. Through the visualizations created we can see there has been a steady observable increase in diabetes diagnosis percentage in many counties in the US from 2010-2018. Also, through our visualization of NYS we can see that there is a correlation between physical inactivity and diagnosed diabetes percentage. These results are consistent with the data and other sources researching diabetes and related health effects. 
 
 # References
 
 Mohammadian, Cyrus. “Plotting Both State and County Boundaries on Same Map Using plot_usmap from USMAP Package in R.” Stack Overflow, 1 Mar. 1967, https://stackoverflow.com/questions/59851823/plotting-both-state-and-county-boundaries-on-same-map-using-plot-usmap-from-usma. 
 
 “Social Determinants of Health - United States Diabetes Surveillance System.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, https://gis.cdc.gov/grasp/diabetes/diabetesatlas-sdoh.html. 
+
+Valentin_Ștefan, et al. “Align Multiple Legends with Patchwork.” Stack Overflow, 1 Jan. 1967, https://stackoverflow.com/questions/59360162/align-multiple-legends-with-patchwork. 
