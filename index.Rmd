@@ -32,9 +32,12 @@ library(gganimate)
 
 
 
-
 ```{r}
-
+setwd("~/Desktop/GEO511/geo511-2022-Bobby-Final-project")
+diabetes_2010<- read.csv("DiabetesAtlasData_2010.csv")
+diabetes_2018 <- read.csv("DiabetesAtlasData_2018.csv")
+inactivity_2010 <- read.csv("DiabetesAtlasData_activity_2010.csv")
+inactivity_2018 <- read.csv("DiabetesAtlasData_activity_2018.csv")
 ```
 
 
