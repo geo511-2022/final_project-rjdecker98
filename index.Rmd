@@ -16,10 +16,6 @@ As of 2015, 30.3 million Americans - 9.4 percent of the U.S. population - are di
 
 For the purpose of this study, a few different visualizations of diabetes and levels of physical activity will be created through the R packages such as ggplot2. An animated map showing the change in spatial distribution of diabetes will be produced using the R package gganimate. 
 
-Code: The code associated with the project is well organized and easy to follow. Demonstrates mastery of R graphics and functions.
-
-Data: The underlying data are publicly accessible via the CDC GIS website and can also be downloaded/accessed within the Rmd script.
-
 First we must load the necessary R packages
 ```{r, message=FALSE, warning=FALSE, results=FALSE}
 library(tidyverse)
@@ -30,6 +26,8 @@ library(gifski)
 library(gganimate)
 library(usmap)
 library(ggthemes)
+library(maps)
+library(purrr)
 ```
 
 
@@ -51,17 +49,11 @@ inactivity_data<-cbind(inactivity_2010,inactivity_2018)
 
 ```
 
-Add any additional processing steps here.
 
 # Results
 
-[~200 words]
 
-Tables and figures (maps and other graphics) are carefully planned to convey the results of your analysis. Intense exploration and evidence of many trials and failures. The author looked at the data in many different ways before coming to the final presentation of the data.
-
-Show tables, plots, etc. and describe them.
-
-First we are going to produce a map of the distribution of Diabetes in the United States from 2010-2018
+First we are going to produce a map of the distribution of Diabetes in the United States in 2010
 ```{r, message=FALSE, warning=FALSE}
 states <- plot_usmap("states", 
                      color = "red",
@@ -90,15 +82,43 @@ ggplot() +
   theme(legend.position="none") +
   scale_fill_gradient(low='white', high='grey20')+
   labs(
-    title="Change in US Diabetes Distribution 2010-2018"
+    title="US Diabetes Distribution 2010"
   )
 
 ```
 
 
+Now for comparison we are going to produce a similar map of the distribution of Diabetes in the United States in 2018
+```{r, message=FALSE, warning=FALSE}
+states <- plot_usmap("states", 
+                     color = "red",
+                     fill = alpha(0.01)) #this parameter is necessary to get counties to show on top of states
+counties <- plot_usmap(data = diabetes_data, 
+                       values = "Diagnosed.Diabetes.Percentage_2018",
+                       color = "black",
+                       size = 0.1)
 
-```{r}
-
+ggplot() +  
+  geom_polygon(data=counties[[1]], 
+               aes(x=x, 
+                   y=y, 
+                   group=group, 
+                   fill = counties[[1]]$Diagnosed.Diabetes.Percentage_2018), 
+               color = "black",
+               size = 0.1) +  
+  geom_polygon(data=states[[1]], 
+               aes(x=x, 
+                   y=y, 
+                   group=group), 
+               color = "red", 
+               fill = alpha(0.01)) + 
+  coord_equal() +
+  theme_map() +
+  theme(legend.position="none") +
+  scale_fill_gradient(low='white', high='grey20')+
+  labs(
+    title="US Diabetes Distribution 2018"
+  )
 ```
 
 # Conclusions
