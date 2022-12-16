@@ -1,4 +1,5 @@
 # Project template for GEO511
+#Bobby Decker
 
 [![main](https://github.com/AdamWilsonLabEDU/geo511_project_template/workflows/main/badge.svg)](https://github.com/AdamWilsonLabEDU/geo511_project_template/actions)
 
