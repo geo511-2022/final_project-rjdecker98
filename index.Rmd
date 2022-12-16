@@ -86,6 +86,7 @@ diabetes<-ggplot() +
     title="US Diabetes Distribution 2010"
   )
 
+diabetes
 ```
 
 
@@ -120,6 +121,8 @@ diabetes1<-ggplot() +
   labs(
     title="US Diabetes Distribution 2018"
   )
+
+diabetes1
 ```
 
 Now we are going use the patchwork package to compare these two maps side by side.
