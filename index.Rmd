@@ -31,9 +31,8 @@ library(gganimate)
 ```
 
 
-
+Next we must read and transform the diabetes data from the CDC's website https://gis.cdc.gov/grasp/diabetes/diabetesatlas-sdoh.html
 ```{r}
-setwd("~/Desktop/GEO511/geo511-2022-Bobby-Final-project")
 diabetes_2010<- read.csv("DiabetesAtlasData_2010.csv")
 diabetes_2018 <- read.csv("DiabetesAtlasData_2018.csv")
 inactivity_2010 <- read.csv("DiabetesAtlasData_activity_2010.csv")
@@ -41,7 +40,6 @@ inactivity_2018 <- read.csv("DiabetesAtlasData_activity_2018.csv")
 ```
 
 
-## Download and clean all required data
 ```{r}
 
 ```
