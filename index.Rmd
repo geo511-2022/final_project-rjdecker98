@@ -33,7 +33,7 @@ library(patchwork)
 
 Next we must read and transform the diabetes and physical inactivity data from the CDC's website https://gis.cdc.gov/grasp/diabetes/diabetesatlas-sdoh.html
 ```{r, message=FALSE, warning=FALSE} 
-diabetes_2010<- read.csv("DiabetesAtlasData_2010.csv")
+diabetes_2010<- read.csv("DiabetesAtlasData_2010.csv") Tried to run code on my own R program as website was not fully loading and this code did not work. Maybe you missed a line of code or wrote it in wron. 
 diabetes_2018 <- read.csv("DiabetesAtlasData_2018.csv")%>%
     rename(fips=County_FIPS_2018)
 
